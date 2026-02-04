@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Medical Blue Palette - Trustworthy, Clean, Professional */
+  --background: 210 40% 98%; /* Very light blue-gray tint */
+  --foreground: 222 47% 11%; /* Deep navy text */
+  
+  --primary: 221 83% 53%; /* Strong medical blue */
+  --primary-foreground: 210 40% 98%;
+  
+  --secondary: 210 40% 96%; /* Light gray-blue */
+  --secondary-foreground: 222 47% 11%;
+  
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  
+  --accent: 199 89% 48%; /* Bright cyan/teal for highlights */
+  --accent-foreground: 210 40% 98%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
+  
+  --radius: 0.75rem;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight text-slate-900;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-primary/20;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground shadow-lg shadow-primary/25 
+           hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 
+           active:translate-y-0 active:shadow-md 
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
+           transition-all duration-200 ease-out font-semibold rounded-lg px-6 py-2.5;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-lg bg-white border-2 border-slate-200
+           text-foreground placeholder:text-muted-foreground
+           focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10
+           transition-all duration-200;
+  }
+}
+
+/* Custom Scrollbar for dashboards */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
