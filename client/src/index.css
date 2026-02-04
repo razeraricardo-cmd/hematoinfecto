@@ -8,28 +8,45 @@
   /* Medical Blue Palette - Trustworthy, Clean, Professional */
   --background: 210 40% 98%; /* Very light blue-gray tint */
   --foreground: 222 47% 11%; /* Deep navy text */
-  
+
   --primary: 221 83% 53%; /* Strong medical blue */
   --primary-foreground: 210 40% 98%;
-  
+
   --secondary: 210 40% 96%; /* Light gray-blue */
   --secondary-foreground: 222 47% 11%;
-  
+
   --muted: 210 40% 96%;
   --muted-foreground: 215 16% 47%;
-  
+
   --accent: 199 89% 48%; /* Bright cyan/teal for highlights */
   --accent-foreground: 210 40% 98%;
-  
+
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
-  
+
   --border: 214 32% 91%;
   --input: 214 32% 91%;
   --ring: 221 83% 53%;
-  
+
+  /* Card */
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --card-border: 214 32% 91%;
+
+  /* Popover */
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --popover-border: 214 32% 91%;
+
+  /* Chart colors */
+  --chart-1: 221 83% 53%;
+  --chart-2: 199 89% 48%;
+  --chart-3: 142 71% 45%;
+  --chart-4: 38 92% 50%;
+  --chart-5: 0 84% 60%;
+
   --radius: 0.75rem;
-  
+
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
